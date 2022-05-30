@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "cyIbrrnG/LoHTygBb1r1a1X/7eRAvj6h7jPQYf45NRWkXTPNqgR9qxm2z5Or8rVzmfl+4+b/pJgIeHiV2Y27cQ==",
+  "success": true,
+  "projectFilePath": "D:\\Docker_Compose\\DockerSupport\\DockercontainerDemo\\ProductApiServices\\ProductApiServices.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.15.1\\microsoft.visualstudio.azure.containers.tools.targets.1.15.1.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}

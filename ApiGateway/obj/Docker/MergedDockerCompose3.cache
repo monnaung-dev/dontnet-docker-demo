@@ -1,0 +1,40 @@
+services:
+  ocelotapigw:
+    build:
+      context: D:\Docker_Compose\DockerSupport\DockercontainerDemo\Apigateway
+      dockerfile: Dockerfile
+    container_name: ocelotapigw
+    depends_on:
+      order.api:
+        condition: service_started
+      product.api:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: ocelotapigw
+    ports:
+    - published: 9000
+      target: 80
+  order.api:
+    build:
+      context: D:\Docker_Compose\DockerSupport\DockercontainerDemo\Apigateway
+      dockerfile: OrderApiServices/Dockerfile
+    container_name: order.api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: order.api
+    ports:
+    - published: 9002
+      target: 80
+  product.api:
+    build:
+      context: D:\Docker_Compose\DockerSupport\DockercontainerDemo\Apigateway
+      dockerfile: ../ProductApiServices/Dockerfile
+    container_name: product.api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: product.api
+    ports:
+    - published: 9001
+      target: 80
+version: '3.4'

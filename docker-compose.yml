@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+ ocelotapigw:
+    image: ${DOCKER_REGISTRY-}ocelotapigw
+    build:
+      context: ./
+      dockerfile: ApiGateway/Dockerfile  
+
+ product.api:
+    image: ${DOCKER_REGISTRY-}product.api
+    build:
+      context: ./
+      dockerfile: ProductApiServices/Dockerfile
+
+ order.api:
+    image: ${DOCKER_REGISTRY-}order.api
+    build:
+      context: ./
+      dockerfile: OrderApiServices/Dockerfile
+
+ 
